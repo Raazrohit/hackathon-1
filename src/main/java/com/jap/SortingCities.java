@@ -12,15 +12,15 @@ public class SortingCities
 		String [] citiesName = {"Bern","Lucerne","Interlaken","Grindelwald","Engelberg","Geneva","Murren","Basel","Zermatt","Jungfraujoch"};
 		int [] distance = {138,52,118,136,85,276,103,87,214,101};
 
-		String [] upperCase = object.toUpperCase(citiesName);
+		String [] convertedNames = object.convertToUpperCase(citiesName);
 		for(int i =0;i< citiesName.length;i++){
-				System.out.print(upperCase[i]+ ", ");
+				System.out.print(convertedNames [i]+ ", ");
 		}
-		object.nearZurich(distance,upperCase);
-		object.greaterCites(distance,upperCase);
+		object.nearZurich(distance,citiesName );
+		object.greaterCites(distance,citiesName );
 
     }
-	public String[] toUpperCase(String []citiesName){
+	public String[] convertToUpperCase(String []citiesName){
 
 			String [] upperCase = new String[citiesName.length];
 

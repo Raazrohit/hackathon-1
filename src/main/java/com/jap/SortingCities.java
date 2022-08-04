@@ -13,7 +13,7 @@ public class SortingCities
 		String[] sortednames = object.convertToUpperCase(cityNames);
         System.out.println( sortednames );
 		object.nearZurich(distance,cityNames);
-		object.greaterCity(distance,cityNames;)
+		object.greaterCity(distance,cityNames);
     }
 	public String convertToUpperCase(String[] cityNames )
 	{
@@ -25,7 +25,7 @@ public class SortingCities
 		for(int i = 0; i<cityNames.length; i++)
 		{
 			if(distance[i] == 52)
-			System.out.println(cityNames[i])l;
+			System.out.println(cityNames[i]);
 		}
 	}
 	public void greaterCity(int[] distance, String[] cityNames)

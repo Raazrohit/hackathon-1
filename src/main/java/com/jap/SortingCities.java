@@ -7,35 +7,44 @@ import java.util.Arrays;
 public class SortingCities
 {
     public static void main( String[] args )
-    {	SortingCities object = new SortingCities();
-		String [] cityNames = {"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
+    {
+        SortingCities object = new SortingCities();
+		String [] citiesName = {"Bern","Lucerne","Interlaken","Grindelwald","Engelberg","Geneva","Murren","Basel","Zermatt","Jungfraujoch"};
 		int [] distance = {138,52,118,136,85,276,103,87,214,101};
-		String[] sortednames = object.convertToUpperCase(cityNames);
-		for(int i =0;i< cityNames.length;i++){
-				System.out.print(sortednames[i]+ ", ");
+
+		String [] upperCase = object.toUpperCase(citiesName);
+		for(int i =0;i< citiesName.length;i++){
+				System.out.print(upperCase[i]+ ", ");
 		}
-		object.nearZurich(distance,cityNames);
-		object.greaterCity(distance,cityNames);
+		object.nearZurich(distance,upperCase);
+		object.greaterCites(distance,upperCase);
+
     }
-	public String convertToUpperCase(String[] cityNames )
-	{
-		String[] names = cityNames.toUpperCase();
-		return names;
+	public String[] toUpperCase(String []citiesName){
+
+			String [] upperCase = new String[citiesName.length];
+
+			for(int i =0;i < citiesName.length;i++){
+				upperCase[i] = citiesName[i].toUpperCase();
+
+			}
+
+		return upperCase;	
 	}
-	public void nearZurich (int[] distance, String[] cityNames)
-	{
-		for(int i = 0; i<cityNames.length; i++)
-		{
-			if(distance[i] == 52)
-			System.out.println(cityNames[i]);
+	public void greaterCites(int []distance,String []citiesName){
+
+		for(int i =0;i < distance.length;i++){
+			if(distance[i] >= 270)
+			System.out.print(citiesName[i] + ", ");
 		}
 	}
-	public void greaterCity(int[] distance, String[] cityNames)
-	{
-		for(int i = 0; i<distance.length; i++)
-		{
-			if(distance[i >= 270])
-			System.out.println(cityNames[i]+", ");
-		}
+	public void nearZurich(int [] distance, String []citiesName){
+
+			for(int i=0;i < citiesName.length;i++){
+
+				if(distance[i] == 52 )
+				System.out.println(citiesName[i]);
+			}
+
 	}
 }

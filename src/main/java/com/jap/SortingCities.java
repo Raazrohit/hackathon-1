@@ -16,6 +16,7 @@ public class SortingCities
 		for(int i =0;i< citiesName.length;i++){
 				System.out.print(convertedNames [i]+ ", ");
 		}
+		System.out.println(" ");
 		object.nearZurich(distance,citiesName );
 		object.greaterCites(distance,citiesName );
 

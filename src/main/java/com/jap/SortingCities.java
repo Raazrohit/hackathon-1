@@ -1,5 +1,5 @@
 package com.jap;
-
+import java.util.Arrays;
 /**
  * Hello world!
  *
@@ -10,12 +10,30 @@ public class SortingCities
     {	SortingCities object = new SortingCities();
 		String [] cityNames = {"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
 		int [] distance = {138,52,118,136,85,276,103,87,214,101};
-		String sortednames = object.convertToUpperCase(cityNames);
+		String[] sortednames = object.convertToUpperCase(cityNames);
         System.out.println( sortednames );
+		object.nearZurich(distance,cityNames);
+		object.greaterCity(distance,cityNames;)
     }
 	public String convertToUpperCase(String[] cityNames )
 	{
-		String names = cityNames.toUpperCase();
+		String[] names = cityNames.toUpperCase();
 		return names;
+	}
+	public void nearZurich (int[] distance, String[] cityNames)
+	{
+		for(int i = 0; i<cityNames.length; i++)
+		{
+			if(distance[i] == 52)
+			System.out.println(cityNames[i])l;
+		}
+	}
+	public void greaterCity(int[] distance, String[] cityNames)
+	{
+		for(int i = 0; i<distance.length; i++)
+		{
+			if(distance[i >= 270])
+			System.out.println(cityNames[i]+", ");
+		}
 	}
 }

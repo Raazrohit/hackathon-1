@@ -1,5 +1,5 @@
 package com.jap;
-import java.util.Arrays;
+
 /**
  * Hello world!
  *
@@ -31,20 +31,25 @@ public class SortingCities
 			}
 		return upperCase;
 	}	
-	public void nearZurich(int [] distance, String []citiesName){
-
+	public String nearZurich(int [] distance, String []citiesName){
+			String Nearzurich = "";
 			for(int i=0;i < citiesName.length;i++){
 
-				if(distance[i] == 52 )
-				System.out.println(citiesName[i]);
+				if(distance[i] == 52 ) {
+					Nearzurich = citiesName[i];
+					System.out.println(citiesName[i]);
+				}
 			}
+		return Nearzurich;
 	}
-	public void greaterCites(int []distance,String []citiesName){
-
+	public String greaterCites(int []distance, String []citiesName){
+		String GreaterCity = "";
 		for(int i =0;i < distance.length;i++){
 			if(distance[i] >= 270)
-			System.out.print(citiesName[i] + ",");
+				GreaterCity = citiesName[i];
 		}
+		System.out.print(GreaterCity);
+		return GreaterCity;
 	}
 	
 }

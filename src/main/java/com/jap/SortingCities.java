@@ -28,16 +28,7 @@ public class SortingCities
 				upperCase[i] = citiesName[i].toUpperCase();
 
 			}
-
 		return upperCase;	
-	}
-	public void greaterCites(int []distance,String []citiesName){
-
-		for(int i =0;i < distance.length;i++){
-			if(distance[i] >= 270)
-			System.out.print(citiesName[i] + ", ");
-		}
-	}
 	public void nearZurich(int [] distance, String []citiesName){
 
 			for(int i=0;i < citiesName.length;i++){
@@ -45,6 +36,14 @@ public class SortingCities
 				if(distance[i] == 52 )
 				System.out.println(citiesName[i]);
 			}
-
 	}
+	}
+	public void greaterCites(int []distance,String []citiesName){
+
+		for(int i =0;i < distance.length;i++){
+			if(distance[i] >= 270)
+			System.out.print(citiesName[i] + ",");
+		}
+	}
+	
 }
